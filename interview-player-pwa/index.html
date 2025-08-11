@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="apple-touch-icon" href="icons/icon-192.png" />
+  <title>Interview Player</title>
+  <style>
+    :root { color-scheme: light dark; }
+    body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial;padding:16px;margin:0}
+    header{display:flex;align-items:center;gap:12px}
+    h1{font-size:20px;margin:0}
+    .controls{margin:12px 0}
+    button{font-size:18px;padding:10px 16px;margin-right:8px;border-radius:10px;border:1px solid #888}
+    #playlist li{cursor:pointer;margin:6px 0;list-style: none;padding:6px 10px;border-radius:8px;border:1px solid #555;display:inline-block}
+    footer{opacity:.7;margin-top:20px;font-size:12px}
+  </style>
+</head>
+<body>
+  <header>
+    <img src="icons/icon-192.png" alt="" width="32" height="32">
+    <h1>Interview Player</h1>
+  </header>
+
+  <audio id="audio" controls preload="metadata" style="width:100%;margin-top:12px"></audio>
+
+  <div class="controls">
+    <button id="prev">◀︎ Prev</button>
+    <button id="play">⏯ Play/Pause</button>
+    <button id="next">Next ▶︎</button>
+  </div>
+
+  <ul id="playlist"></ul>
+
+  <footer>
+    Tip: add this to your iPhone Home Screen from Safari (Share → Add to Home Screen).
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
